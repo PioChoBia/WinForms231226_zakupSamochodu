@@ -136,10 +136,18 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Opel Astra",
+            "Opel Zafira",
+            "Skoda Felicja",
+            "Dacia Duster",
+            "Mercedes Vito",
+            "Nissan Juke"});
             this.comboBox1.Location = new System.Drawing.Point(215, 78);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 9;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBoxCena
             // 
@@ -154,6 +162,7 @@
             this.numericUpDownRabat.Name = "numericUpDownRabat";
             this.numericUpDownRabat.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownRabat.TabIndex = 11;
+            this.numericUpDownRabat.ValueChanged += new System.EventHandler(this.numericUpDownRabat_ValueChanged);
             // 
             // textBoxDoZaplaty
             // 
@@ -168,13 +177,17 @@
             this.textBoxStopa.Name = "textBoxStopa";
             this.textBoxStopa.Size = new System.Drawing.Size(75, 23);
             this.textBoxStopa.TabIndex = 13;
+            this.textBoxStopa.Text = "0";
+            this.textBoxStopa.TextChanged += new System.EventHandler(this.textBoxStopa_TextChanged);
             // 
             // hScrollBarStopa
             // 
             this.hScrollBarStopa.Location = new System.Drawing.Point(380, 321);
             this.hScrollBarStopa.Name = "hScrollBarStopa";
-            this.hScrollBarStopa.Size = new System.Drawing.Size(130, 24);
+            this.hScrollBarStopa.Size = new System.Drawing.Size(223, 24);
+            this.hScrollBarStopa.SmallChange = 5;
             this.hScrollBarStopa.TabIndex = 14;
+            this.hScrollBarStopa.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarStopa_Scroll);
             // 
             // numericUpDownIleRat
             // 
@@ -182,6 +195,7 @@
             this.numericUpDownIleRat.Name = "numericUpDownIleRat";
             this.numericUpDownIleRat.Size = new System.Drawing.Size(75, 23);
             this.numericUpDownIleRat.TabIndex = 15;
+            this.numericUpDownIleRat.ValueChanged += new System.EventHandler(this.numericUpDownIleRat_ValueChanged);
             // 
             // textBoxRata
             // 
